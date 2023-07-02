@@ -1,0 +1,14 @@
+{
+  "version": "0.1.22",
+  "name": "jsonata_in_bun",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "dependencies": {
+    "websi": "^0.3.0"
+  },
+  "scripts": {
+    "start": "bun --hot main.ts"
+  },
+  "module": "main.ts"
+}
