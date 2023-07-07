@@ -5,6 +5,7 @@
     "bun-types": "latest"
   },
   "dependencies": {
+    "jsonata": "^2.0.3",
     "websi": "^0.3.0"
   },
   "scripts": {
