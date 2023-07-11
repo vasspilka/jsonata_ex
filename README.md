@@ -1,6 +1,10 @@
 # Jsonata
 
-**TODO: Add description**
+ JSONata is a JSON query and transformation language.
+
+ It can be very usefull for [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load) pipelines that have JSON as input and output.
+
+ More info about JSONata can be found on their [website](https://jsonata.org/)
 
 ## Installation
 
