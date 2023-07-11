@@ -1,3 +1,7 @@
+# Bun/Js related
 node_modules
 bun.lockb
+
+# Elixir related
 _build
+deps

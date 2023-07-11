@@ -10,6 +10,7 @@ defmodule Jsonata.Application do
     children = [
       # Starts a worker by calling: Jsonata.Worker.start_link(arg)
       # {Jsonata.Worker, arg}
+      {Sidecar.Supervisor, [processes: [bun: "bun start"]]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
