@@ -5,8 +5,10 @@ defmodule Jsonata.MixProject do
     [
       app: :jsonata,
       version: "0.1.0",
+      description: "JSONata in a bun",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
+      package: package(),
       deps: deps()
     ]
   end
@@ -26,6 +28,13 @@ defmodule Jsonata.MixProject do
       # Req has a lot of dependencies, consider sharper alternatives
       # for HTTP/Webhooks
       {:req, "~> 0.3.10"}
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/vasspilka/jsonata_ex"}
     ]
   end
 end
