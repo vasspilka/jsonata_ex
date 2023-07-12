@@ -16,8 +16,14 @@ defmodule Jsonata do
       iex> Jsonata.evaluate(~s({"name": firstName & ' ' & surname}), %{firstName: "bob", surname: "doe"})
       %{"name" => "bob doe"}
 
+      iex> Jsonata.evaluate(~s({"name": firstName & ' ' & surname}), ~s({"firstName": "bob", "surname": "doe"}))
+      %{"name" => "bob doe"}
 
   """
+  def evaluate(template, data) when is_binary(data) do
+    Req.post!("http://localhost:8080", json: %{template: template, data: Jason.decode!(data)}).body
+  end
+
   def evaluate(template, data) do
     Req.post!("http://localhost:8080", json: %{template: template, data: data}).body
   end
