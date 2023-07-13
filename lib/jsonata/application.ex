@@ -7,10 +7,14 @@ defmodule Jsonata.Application do
 
   @impl true
   def start(_type, _args) do
+    file =
+      Application.app_dir(:jsonata, "priv/main.ts")
+
     children = [
       # Starts a worker by calling: Jsonata.Worker.start_link(arg)
       # {Jsonata.Worker, arg}
-      {Sidecar.Supervisor, [processes: [bun: "bun start"]]}
+      # {Sidecar.Supervisor, [processes: [bun: "bun --hot ", echo: "pwd"]]}
+      {Sidecar.Supervisor, [processes: [bun: "bun --hot #{file}"]]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

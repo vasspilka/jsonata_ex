@@ -4,7 +4,7 @@ defmodule Jsonata.MixProject do
   def project do
     [
       app: :jsonata,
-      version: "0.1.0",
+      version: "0.1.2",
       description: "JSONata in a bun",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
